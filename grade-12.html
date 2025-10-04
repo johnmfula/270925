@@ -70,11 +70,15 @@
     </script>
     
 
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/templatemo-grad-school.css" as="style">
+    <link rel="preload" href="assets/images/teacher-video.mp4" as="video">
+    
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="assets/css/owl.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/lightbox.css" media="print" onload="this.media='all'">
 
     <style>
       .accordion-container {
@@ -220,7 +224,7 @@
 
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
-      <video autoplay muted loop id="bg-video">
+      <video autoplay muted loop id="bg-video" preload="metadata" poster="assets/images/main-slider-01.jpg">
           <source src="assets/images/teacher-video.mp4" type="video/mp4" />
       </video>
 

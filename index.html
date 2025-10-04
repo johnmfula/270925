@@ -10,30 +10,316 @@
     <link rel="canonical" href="https://eczsolutions.com/">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>ECZ Solutions - Database of ECZ Solutions and Materials </title>
+    <title>ECZ Solutions - Free ECZ Past Papers, Study Materials & Online Quizzes for Grade 7, 9 & 12 Zambian Students | ECZ Solutions</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "ECZ Solutions",
+      "description": "Free ECZ past papers, study materials and online quizzes for Grade 7, 9 & 12 Zambian students",
+      "url": "https://eczsolutions.com/",
+      "logo": "https://eczsolutions.com/assets/images/ECZ-Solution.png",
+      "foundingDate": "2024",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ZM"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "eczstudytool@gmail.com",
+        "contactType": "customer service"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free ECZ past papers and study materials"
+      },
+      "educationalLevel": ["Grade 7", "Grade 9", "Grade 12"],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "sameAs": [
+        "https://eczstudytool.com",
+        "https://web.facebook.com/people/ECZ-Study-Tool-ECZ-Materials/100092730554645/",
+        "https://www.youtube.com/channel/UCUUeHYHg7wYCi1sxipZxQMA"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "ECZ Study Materials",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "ECZ Grade 7 Past Papers",
+              "description": "Free Grade 7 ECZ past papers and study materials"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "ECZ Grade 9 Past Papers",
+              "description": "Free Grade 9 ECZ past papers and study materials"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "ECZ Grade 12 Past Papers",
+              "description": "Free Grade 12 ECZ past papers and study materials"
+            }
+          }
+        ]
+      }
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/ECZ-Solution.png">
     <link rel="shortcut icon" type="image/png" href="assets/images/ECZ-Solution.png">
     <link rel="apple-touch-icon" href="assets/images/ECZ-Solution.png">
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-KF8MQ7BC"></script>
+    <!-- Google Analytics - Deferred -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'GT-KF8MQ7BC');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-KF8MQ7BC" defer></script>
+    
+    <!-- Critical CSS Inline -->
+    <style>
+      /* Critical above-the-fold styles - Minified */
+      body{margin:0;font-family:'Montserrat',sans-serif}
+      .main-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,0.9);transition:all 0.3s ease}
+      .main-banner{position:relative;min-height:100vh;display:flex;align-items:center}
+      .video-overlay{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center}
+      .caption h1{font-size:2.5rem;margin-bottom:2rem;text-align:center}
+      .main-button{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+      .scroll-to-section{background:#f5a425;color:white;padding:12px 24px;border-radius:5px;text-decoration:none;transition:all 0.3s ease}
+      .scroll-to-section:hover{background:#e0941a;color:white}
+      /* Navigation improvements */
+      .main-menu{display:flex;list-style:none;margin:0;padding:0}
+      .main-menu li{position:relative}
+      .main-menu li a{color:white;text-decoration:none;padding:15px 20px;display:block;transition:all 0.3s ease}
+      .main-menu li a:hover{color:#f5a425}
+      .main-menu li.active a{color:#f5a425}
+      .sub-menu{position:absolute;top:100%;left:0;background:rgba(0,0,0,0.9);min-width:200px;opacity:0;visibility:hidden;transition:all 0.3s ease}
+      .has-submenu:hover .sub-menu{opacity:1;visibility:visible}
+      .sub-menu li{display:block}
+      .sub-menu li a{padding:10px 20px;border-bottom:1px solid rgba(255,255,255,0.1)}
+      /* Mobile menu - Clean design without black screen */
+      .menu-link{
+        display:none;
+        color:white;
+        font-size:24px;
+        padding:10px;
+        cursor:pointer;
+        z-index:1001;
+        position:relative;
+        background:none;
+        border:none;
+        outline:none;
+      }
+      
+      @media (max-width:768px){
+        .menu-link{
+          display:block !important;
+          position:absolute;
+          top:15px;
+          right:15px;
+          z-index:1002;
+        }
+        
+        .main-nav{
+          position:fixed !important;
+          top:60px;
+          left:-100%;
+          width:280px;
+          height:calc(100vh - 60px);
+          background:rgba(255,255,255,0.98);
+          backdrop-filter:blur(10px);
+          z-index:1000;
+          transition:left 0.3s ease;
+          overflow-y:auto;
+          box-shadow:2px 0 10px rgba(0,0,0,0.1);
+          border-right:1px solid rgba(0,0,0,0.1);
+        }
+        
+        .main-nav.active{
+          left:0 !important;
+        }
+        
+        .main-menu{
+          list-style:none;
+          padding:20px 0;
+          margin:0;
+          width:100%;
+        }
+        
+        .main-menu li{
+          width:100%;
+          border-bottom:1px solid rgba(0,0,0,0.1);
+          margin:0;
+        }
+        
+        .main-menu li a{
+          padding:18px 20px;
+          display:block;
+          color:#333;
+          text-decoration:none;
+          font-size:16px;
+          transition:all 0.3s ease;
+          font-weight:500;
+          border-left:3px solid transparent;
+        }
+        
+        .main-menu li a:hover{
+          background:rgba(245,164,37,0.1);
+          color:#f5a425;
+          padding-left:30px;
+          border-left:3px solid #f5a425;
+        }
+        
+        .main-menu li.active a{
+          background:rgba(245,164,37,0.1);
+          color:#f5a425;
+          border-left:3px solid #f5a425;
+        }
+        
+        .sub-menu{
+          position:static;
+          opacity:1;
+          visibility:visible;
+          background:rgba(245,164,37,0.05);
+          margin:0;
+          padding:0;
+          list-style:none;
+          border-left:3px solid rgba(245,164,37,0.3);
+        }
+        
+        .sub-menu li{
+          border-bottom:none;
+        }
+        
+        .sub-menu li a{
+          padding:15px 20px 15px 40px;
+          font-size:14px;
+          color:#666;
+          background:none;
+          border-left:3px solid transparent;
+          position:relative;
+        }
+        
+        .sub-menu li a:before{
+          content:'→';
+          position:absolute;
+          left:20px;
+          color:#f5a425;
+          font-weight:bold;
+        }
+        
+        .sub-menu li a:hover{
+          background:rgba(245,164,37,0.1);
+          color:#f5a425;
+          padding-left:50px;
+          border-left:3px solid #f5a425;
+        }
+        
+        .sub-menu li a:hover:before{
+          color:#f5a425;
+        }
+        
+        /* Prevent body scroll when menu is open */
+        body.menu-open{
+          overflow:hidden !important;
+        }
+        
+        body.menu-open .main-nav{
+          overflow-y:auto;
+        }
+        
+        /* Close button for mobile menu */
+        .mobile-close-btn{
+          display:block !important;
+          position:absolute;
+          top:15px;
+          right:15px;
+          font-size:24px;
+          color:#666;
+          cursor:pointer;
+          z-index:1001;
+          background:none;
+          border:none;
+          padding:5px;
+          line-height:1;
+        }
+        
+        .mobile-close-btn:hover{
+          color:#f5a425;
+        }
+      }
+      /* Image optimization */
+      picture{display:block}
+      img{max-width:100%;height:auto}
+      /* Smooth scrolling */
+      html{scroll-behavior:smooth}
+    </style>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="vendor/bootstrap/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="assets/css/templatemo-grad-school.css" as="style">
+    <link rel="preload" href="assets/images/teacher-video.mp4" as="video">
+    
+    <!-- Mobile Performance Optimizations -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <!-- Additional CSS Files - Optimized Loading -->
     <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/owl.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/lightbox.css" media="print" onload="this.media='all'">
+    
+    <!-- Critical CSS Inline for Mobile Performance -->
+    <style>
+      /* Mobile-first critical styles */
+      @media (max-width: 768px) {
+        .main-banner { min-height: 100vh; }
+        .caption h1 { font-size: 1.8rem; }
+        .main-button { flex-direction: column; gap: 0.5rem; }
+        .scroll-to-section { padding: 10px 20px; font-size: 14px; }
+        .owl-carousel .item { margin: 10px; }
+        .features-post { margin-bottom: 30px; }
+        .section { padding: 50px 0; }
+      }
+      
+      /* Performance optimizations */
+      .owl-carousel { visibility: hidden; }
+      .owl-carousel.owl-loaded { visibility: visible; }
+      
+      /* Reduce animations on mobile */
+      @media (prefers-reduced-motion: reduce) {
+        * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
+    </style>
 <!--
     
 TemplateMo 557 Grad School
@@ -53,6 +339,7 @@ https://templatemo.com/tm-557-grad-school
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
+      <button class="mobile-close-btn" style="display:none;">×</button>
       <ul class="main-menu">
         <li><a href="#section1">Home</a></li>
         <li><a href="#section2">About Us</a></li>
@@ -70,8 +357,8 @@ https://templatemo.com/tm-557-grad-school
   </header>
 
   <!-- ***** Main Banner Area Start ***** -->
-  <section class="section main-banner" id="top" data-section="section1">
-      <video autoplay muted loop id="bg-video">
+  <section class="section main-banner" id="section1" data-section="section1">
+      <video autoplay muted loop id="bg-video" preload="metadata" poster="assets/images/main-slider-01.jpg" playsinline>
           <source src="assets/images/teacher-video.mp4" type="video/mp4" />
       </video>
 
@@ -89,7 +376,7 @@ https://templatemo.com/tm-557-grad-school
   <!-- ***** Main Banner Area End ***** -->
 
 
-  <section class="features">
+  <section class="features" id="section2" data-section="section2" style="padding-top: 100px;">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-12">
@@ -138,7 +425,7 @@ https://templatemo.com/tm-557-grad-school
     </div>
   </section>
 
-  <section class="section why-us" data-section="section2">
+  <section class="section why-us" id="section2" data-section="section2" style="padding-top: 100px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -157,7 +444,7 @@ https://templatemo.com/tm-557-grad-school
               <article id='tabs-1'>
                 <div class="row">
                   <div class="col-md-6">
-                    <img src="assets/images/courses-01.jpg" alt="">
+                    <img src="assets/images/courses-01.jpg" alt="ECZ Past Papers Study Materials" loading="lazy" width="400" height="300">
                   </div>
                   <div class="col-md-6">
                     <h4>ECZ Past Papers</h4>
@@ -168,7 +455,7 @@ https://templatemo.com/tm-557-grad-school
               <article id='tabs-2'>
                 <div class="row">
                   <div class="col-md-6">
-                    <img src="assets/images/video-bg.jpg" alt="">
+                    <img src="assets/images/video-bg.jpg" alt="ECZ Grade 7, 9 & 12 Study Materials" loading="lazy" width="400" height="300">
                   </div>
                   <div class="col-md-6">
                     <h4>Grade 7, 9 & 12</h4>
@@ -179,7 +466,7 @@ https://templatemo.com/tm-557-grad-school
               <article id='tabs-3'>
                 <div class="row">
                   <div class="col-md-6">
-                    <img src="assets/images/main-slider-02.jpg" alt="">
+                    <img src="assets/images/main-slider-02.jpg" alt="ECZ Online Quizzes and Practice Tests" loading="lazy" width="400" height="300">
                   </div>
                   <div class="col-md-6">
                     <h4>Online Quizzes</h4>
@@ -194,7 +481,7 @@ https://templatemo.com/tm-557-grad-school
     </div>
   </section>
 
-  <section class="section courses" data-section="section4">
+  <section class="section courses" id="section4" data-section="section4" style="padding-top: 100px;">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -204,7 +491,7 @@ https://templatemo.com/tm-557-grad-school
         </div>
         <div class="owl-carousel owl-theme">
           <div class="item">
-            <img src="assets/images/young-scientist-girl-mathematics.jpg" alt="ECZ Grade 7 & 9 Past Papers">
+            <img src="assets/images/young-scientist-girl-mathematics.jpg" alt="ECZ Grade 7 & 9 Past Papers" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>Grade 7 & 9 Past Papers</h4>
               <p>Complete collection of ECZ Grade 7 and Grade 9 past papers for Zambian students. Mathematics, Science, English, Social Studies and more subjects available.</p>
@@ -215,7 +502,7 @@ https://templatemo.com/tm-557-grad-school
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/african-american-girl-studying-with-exhaustion-burnout-all-night-exams.jpg" alt="ECZ Grade 12 Past Papers">
+            <img src="assets/images/pexels-gabby-k-6238048.jpg" alt="ECZ Grade 12 Past Papers" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>Grade 12 Past Papers</h4>
               <p>Complete collection of ECZ Grade 12 past papers for Zambian students. Mathematics, Chemistry, Physics, Biology, English, Science and more subjects available.</p>
@@ -226,7 +513,7 @@ https://templatemo.com/tm-557-grad-school
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/math-katerina-holmes-5905857.jpg" alt="ECZ Mathematics Past Papers">
+            <img src="assets/images/math-katerina-holmes-5905857.jpg" alt="ECZ Mathematics Past Papers" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>Mathematics</h4>
               <p>ECZ Mathematics past papers, marking schemes and study guides for Grade 7, 9 & 12 Zambian students. Complete solutions and step-by-step explanations.</p>
@@ -237,7 +524,7 @@ https://templatemo.com/tm-557-grad-school
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/courses-01.jpg" alt="ECZ Chemistry Past Papers">
+            <img src="assets/images/courses-01.jpg" alt="ECZ Chemistry Past Papers" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>Chemistry</h4>
               <p>ECZ Chemistry past papers, marking keys and laboratory guides for Zambian Grade 7, 9 & 12 students. Comprehensive chemical equations and reactions.</p>
@@ -248,7 +535,7 @@ https://templatemo.com/tm-557-grad-school
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/physics-jeshoots-com-147458-714699.jpg" alt="ECZ Physics Past Papers">
+            <img src="assets/images/physics-jeshoots-com-147458-714699.jpg" alt="ECZ Physics Past Papers" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>Physics</h4>
               <p>ECZ Physics past papers, marking schemes and practical guides for Zambian students. Mechanics, electricity, and thermodynamics concepts explained.</p>
@@ -259,7 +546,7 @@ https://templatemo.com/tm-557-grad-school
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/science-rethaferguson-3825462.jpg" alt="ECZ Science Past Papers">
+            <img src="assets/images/science-rethaferguson-3825462.jpg" alt="ECZ Science Past Papers" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>Science</h4>
               <p>ECZ General Science past papers and study materials for Zambian Grade 7, 9 & 12 students. Integrated science concepts and practical applications.</p>
@@ -270,7 +557,7 @@ https://templatemo.com/tm-557-grad-school
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/female-student-working-with-microscope-biology.jpg" alt="ECZ Biology Past Papers">
+            <img src="assets/images/female-student-working-with-microscope-biology.jpg" alt="ECZ Biology Past Papers" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>Biology</h4>
               <p>ECZ Biology past papers, marking keys and laboratory guides for Zambian students. Cell biology, genetics, and ecology concepts covered.</p>
@@ -281,7 +568,7 @@ https://templatemo.com/tm-557-grad-school
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/pamphlets.jpg" alt="ECZ Pamphlets">
+            <img src="assets/images/pamphlets.jpg" alt="ECZ Pamphlets" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>Pamphlets</h4>
               <p>ECZ study pamphlets and revision guides for Zambian Grade 7, 9 & 12 students. Condensed notes and key concepts for effective exam preparation.</p>
@@ -292,7 +579,7 @@ https://templatemo.com/tm-557-grad-school
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/textbooks.jpg" alt="ECZ TextBooks">
+            <img src="assets/images/textbooks.jpg" alt="ECZ TextBooks" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>TextBooks</h4>
               <p>ECZ approved textbooks and comprehensive study materials for Zambian Grade 7, 9 & 12 students. Complete curriculum coverage with detailed explanations.</p>
@@ -303,7 +590,7 @@ https://templatemo.com/tm-557-grad-school
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/eczpastpapers_with_answers.jpg" alt="ECZ Marking Key">
+            <img src="assets/images/eczpastpapers_with_answers.jpg" alt="ECZ Marking Key" loading="lazy" width="400" height="300">
             <div class="down-content">
               <h4>Marking Key</h4>
               <p>ECZ marking schemes and answer keys for past papers. Detailed marking criteria and scoring guidelines for Zambian Grade 7, 9 & 12 examinations.</p>
@@ -318,7 +605,7 @@ https://templatemo.com/tm-557-grad-school
     </div>
   </section>
 
-  <section class="section contact" data-section="section6">
+  <section class="section contact" id="section6" data-section="section6" style="padding-top: 100px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -347,80 +634,277 @@ https://templatemo.com/tm-557-grad-school
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
+  <!-- Scripts - Optimized Loading -->
+  <!-- Critical JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/video.js"></script>
-    <script src="assets/js/slick-slider.js"></script>
-    <script src="assets/js/custom.js"></script>
+    
+    <!-- Non-critical JavaScript - Load in proper order -->
     <script>
-        //according to loftblog tut
-        $('.nav li:first').addClass('active');
-
-        var showSection = function showSection(section, isAnimate) {
-          var
-          direction = section.replace(/#/, ''),
-          reqSection = $('.section').filter('[data-section="' + direction + '"]');
+      // Load scripts in proper order to avoid dependency issues
+      function loadScript(src, callback) {
+        var script = document.createElement('script');
+        script.src = src;
+        script.onload = callback;
+        script.async = true;
+        document.head.appendChild(script);
+      }
+      
+      // Load scripts after page load
+      window.addEventListener('load', function() {
+        // Load Bootstrap first
+        loadScript('vendor/bootstrap/js/bootstrap.min.js', function() {
+          console.log('Bootstrap loaded');
+        });
+        
+        // Load Owl Carousel
+        loadScript('assets/js/owl-carousel.js', function() {
+          console.log('Owl Carousel loaded');
           
-          // Check if section exists before trying to get its position
-          if (reqSection.length === 0) {
-            console.log('Section not found:', direction);
-            return;
+          // Initialize Owl Carousel after it's loaded
+          if (typeof $.fn.owlCarousel !== 'undefined') {
+            $('.owl-carousel').owlCarousel({
+              loop: true,
+              margin: 30,
+              nav: true,
+              autoplay: true,
+              autoplayTimeout: 5000,
+              autoplayHoverPause: true,
+              responsive: {
+                0: { items: 1 },
+                550: { items: 2 },
+                750: { items: 3 },
+                1000: { items: 4 },
+                1200: { items: 5 }
+              }
+            });
           }
+        });
+        
+        // Load other scripts in proper order
+        loadScript('assets/js/tabs.js', function() {
+          console.log('Tabs loaded');
+        });
+        
+        // Load slick-slider.js first
+        loadScript('assets/js/slick-slider.js', function() {
+          console.log('Slick Slider loaded');
           
-          var reqSectionPos = reqSection.offset().top - 0;
-
-          if (isAnimate) {
-            $('body, html').animate({
-              scrollTop: reqSectionPos },
-            800);
-          } else {
-            $('body, html').scrollTop(reqSectionPos);
-          }
-
-        };
-
-        var checkSection = function checkSection() {
-          $('.section').each(function () {
-            var
-            $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-              var
-              currentId = $this.data('section'),
-              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-              reqLink.closest('li').addClass('active').
-              siblings().removeClass('active');
-            }
+          // Load lightbox.js after slick-slider.js
+          loadScript('assets/js/lightbox.js', function() {
+            console.log('Lightbox loaded');
+            
+            // Load video.js after lightbox.js
+            loadScript('assets/js/video.js', function() {
+              console.log('Video loaded');
+              
+              // Initialize videoPopup after video.js is loaded
+              if (typeof videoPopup === 'function') {
+                videoPopup();
+                console.log('VideoPopup initialized');
+              }
+              
+              // Load custom.js after all dependencies are loaded
+              loadScript('assets/js/custom.js', function() {
+                console.log('Custom loaded');
+                
+                // Initialize Slick slider after custom.js is loaded
+                if (typeof $.fn.slick !== 'undefined') {
+                  $(".Modern-Slider").slick({
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    speed: 600,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    pauseOnHover: false,
+                    adaptiveHeight: true,
+                    arrows: true,
+                    fade: false,
+                    infinite: true,
+                    swipeToSlide: true,
+                    touchMove: true,
+                    responsive: [
+                      {
+                        breakpoint: 1024,
+                        settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1
+                        }
+                      },
+                      {
+                        breakpoint: 600,
+                        settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1
+                        }
+                      }
+                    ]
+                  });
+                  console.log('Slick slider initialized');
+                }
+              });
+            });
           });
-        };
+        });
+      });
+    </script>
+    <script>
+        // Wait for DOM to be ready
+        $(document).ready(function() {
+            console.log('Navigation script loaded');
+            
+            // Initialize navigation
+            $('.main-menu li:first').addClass('active');
 
-        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
-          if($(e.target).hasClass('external')) {
-            return;
-          }
-          
+            // Simple smooth scrolling function
+            function smoothScrollTo(target) {
+                var targetElement = $(target);
+                if (targetElement.length) {
+                    var targetPosition = targetElement.offset().top - 80;
+                    $('html, body').animate({
+                        scrollTop: targetPosition
+                    }, 800);
+                    console.log('Scrolling to:', target, 'at position:', targetPosition);
+                } else {
+                    console.log('Target not found:', target);
+                }
+            }
+
+            // Handle all navigation clicks
+            $('.main-menu a').on('click', function(e) {
+                var href = $(this).attr('href');
+                console.log('Navigation clicked:', href);
+                
+                // Close mobile menu
+                $('#menu').removeClass('active');
+                $('.menu-link').removeClass('active');
+                $('body').removeClass('menu-open');
+                $('body').css('overflow', '');
+                
+                // Handle internal anchor links
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    smoothScrollTo(href);
+                }
+                // External links will work normally
+            });
+
+            // Handle scroll-to-section buttons
+            $('.scroll-to-section a').on('click', function(e) {
           var href = $(this).attr('href');
+                console.log('Scroll button clicked:', href);
           
-          // Only prevent default and use showSection for internal anchor links
           if (href && href.startsWith('#')) {
             e.preventDefault();
-            $('#menu').removeClass('active');
-            showSection(href, true);
-          }
-          // For external links (like grade-7-9.html), let them work normally
-        });
+                    smoothScrollTo(href);
+                }
+            });
 
+            // Mobile menu toggle - Simple and reliable
+            function toggleMobileMenu() {
+                var menu = document.getElementById('menu');
+                var menuLink = document.querySelector('.menu-link');
+                var body = document.body;
+                
+                if (menu && menuLink) {
+                    var isActive = menu.classList.contains('active');
+                    
+                    console.log('Mobile menu toggle - Current state:', isActive);
+                    
+                    if (isActive) {
+                        // Close menu
+                        menu.classList.remove('active');
+                        menuLink.classList.remove('active');
+                        body.classList.remove('menu-open');
+                        body.style.overflow = '';
+                        console.log('Mobile menu closed');
+                    } else {
+                        // Open menu
+                        menu.classList.add('active');
+                        menuLink.classList.add('active');
+                        body.classList.add('menu-open');
+                        body.style.overflow = 'hidden';
+                        console.log('Mobile menu opened');
+                    }
+                }
+            }
+            
+            // Initialize mobile menu when DOM is ready
+            $(document).ready(function() {
+                console.log('Setting up mobile menu...');
+                
+                // Add click handler to menu link
+                $(document).on('click', '.menu-link', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Menu link clicked!');
+                    toggleMobileMenu();
+                    return false;
+                });
+                
+                // Close menu when clicking outside
+                $(document).on('click', function(e) {
+                    if (!$(e.target).closest('#menu, .menu-link').length) {
+                        var menu = document.getElementById('menu');
+                        if (menu && menu.classList.contains('active')) {
+                            toggleMobileMenu();
+                            console.log('Menu closed by clicking outside');
+                        }
+                    }
+                });
+                
+                // Close menu when clicking navigation links
+                $(document).on('click', '.main-menu a', function() {
+                    var menu = document.getElementById('menu');
+                    if (menu && menu.classList.contains('active')) {
+                        toggleMobileMenu();
+                        console.log('Menu closed by navigation link click');
+                    }
+                });
+                
+                // Close menu when clicking the close button (×)
+                $(document).on('click', '.mobile-close-btn', function() {
+                    toggleMobileMenu();
+                    console.log('Menu closed by close button');
+                });
+                
+                console.log('Mobile menu setup complete');
+            });
+
+            // Close mobile menu when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('#menu, .menu-link').length) {
+                    $('#menu').removeClass('active');
+                    $('.menu-link').removeClass('active');
+                    $('body').removeClass('menu-open');
+                    $('body').css('overflow', '');
+                    console.log('Mobile menu closed by clicking outside');
+                }
+            });
+
+            // Section highlighting on scroll
         $(window).scroll(function () {
-          checkSection();
+                var scrollPos = $(window).scrollTop() + 100;
+                
+                $('.section').each(function () {
+                    var $this = $(this);
+                    var sectionTop = $this.offset().top;
+                    var sectionBottom = sectionTop + $this.height();
+                    var sectionId = $this.attr('id') || $this.data('section');
+                    
+                    if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                        $('.main-menu li').removeClass('active');
+                        $('a[href="#' + sectionId + '"]').closest('li').addClass('active');
+                    }
+                });
+            });
+
+            // Test function to verify sections exist
+            console.log('Available sections:');
+            $('.section').each(function() {
+                var id = $(this).attr('id');
+                var dataSection = $(this).data('section');
+                console.log('Section:', id || dataSection, 'Element:', this);
+            });
         });
     </script>
 </body>
