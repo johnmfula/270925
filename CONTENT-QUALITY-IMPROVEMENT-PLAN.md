@@ -326,7 +326,7 @@ At the end of each article:
 ## References and Further Reading
 
 1. Examinations Council of Zambia. (2024). *Official Examination Guidelines*. 
-   Retrieved from [https://www.examinationscouncil.org.zm](URL)
+   Retrieved from [https://systems.exams-council.org.zm](URL)
 
 2. Ministry of General Education, Zambia. (2024). *Education Statistics Report*.
 
@@ -336,7 +336,7 @@ At the end of each article:
 4. ECZ Annual Reports (2019-2024)
 
 ## External Resources
-- [Official ECZ Website](https://www.examinationscouncil.org.zm)
+- [Official ECZ Website](https://systems.exams-council.org.zm)
 - [Ministry of Education - Zambia](URL)
 - [ECZ Examination Timetable](URL)
 ```
